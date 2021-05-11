@@ -1,0 +1,60 @@
+/*Sam, Dan, Matt, Nate
+  Produced: Nov 5th, 2019
+  Last Change: December 11th, 2019
+  Purpose: Meal Plan Generator takes user's gender, age, and activity level and tells the
+  user their daily recommended calorie intake and allows them to select breakfast, lunch, and
+  dinner options for a week and tells them the calorie count for each meal and the calorie
+  count for the day*/
+body, html {
+		min-height: 100%
+
+}
+/*applies font style to text for site*/
+body {
+  margin: 0;
+  font-family: Nanum Gothic;
+}
+/*It sets the background image*/
+.bg {
+  height: auto; /*Generates automatic height of image*/
+  background-image: url("./index2.jpeg"); /*Uses pathway to set image as background*/
+	background-repeat: no-repeat;/*Image won't repeat*/
+  background-position: center center;/*Background image set in center*/
+  background-size: cover; /*Covers entireyy o*/
+	}
+
+/*Makes a black background color for navigation bar*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/*Creates the style of the links inside navigation bar*/
+.topnav a {
+  float: left; /*places navigation bar links in top left corner*/
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+/*Changes color of links on hover*/
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*Changes color from black to white on active link*/
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right; /*places navigation bar top right of site*/
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}

@@ -1,0 +1,634 @@
+<html>
+<head>
+<title>Generator</title>
+<link href="WebsiteCSS.css" rel="stylesheet" type="text/css" /> <!--links CSS file to html, implementing CSS feature-->
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<SCRIPT>
+  function checkTotalone() {
+    document.dayOne.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.dayOne.choice.length;i++) {
+      if (document.dayOne.choice[i].checked) {
+        sum = sum + parseInt(document.dayOne.choice[i].value);
+      }
+    }
+    document.dayOne.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.dayOne.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.dayOne.choice[i].value);
+      }
+    }
+    document.dayOne.totalBreakOne.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.dayOne.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.dayOne.choice[i].value);
+      }
+    }
+    document.dayOne.totalLunchOne.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.dayOne.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.dayOne.choice[i].value);
+      }
+    }
+    document.dayOne.totalDinnerOne.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day One.")
+    }
+  }
+
+  function checkTotaltwo() {
+    document.dayTwo.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.dayTwo.choice.length;i++) {
+      if (document.dayTwo.choice[i].checked) {
+        sum = sum + parseInt(document.dayTwo.choice[i].value);
+      }
+    }
+    document.dayTwo.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.dayTwo.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.dayTwo.choice[i].value);
+      }
+    }
+    document.dayTwo.totalBreakTwo.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.dayTwo.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.dayTwo.choice[i].value);
+      }
+    }
+    document.dayTwo.totalLunchTwo.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.dayTwo.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.dayTwo.choice[i].value);
+      }
+    }
+    document.dayTwo.totalDinnerTwo.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Two.")
+    }
+  }
+
+  function checkTotalthree() {
+    document.dayThree.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.dayThree.choice.length;i++) {
+      if (document.dayThree.choice[i].checked) {
+        sum = sum + parseInt(document.dayThree.choice[i].value);
+      }
+    }
+    document.dayThree.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.dayThree.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.dayThree.choice[i].value);
+      }
+    }
+    document.dayThree.totalBreakThree.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.dayThree.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.dayThree.choice[i].value);
+      }
+    }
+    document.dayThree.totalLunchThree.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.dayThree.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.dayThree.choice[i].value);
+      }
+    }
+    document.dayThree.totalDinnerThree.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Three.")
+    }
+  }
+
+  function checkTotalfour() {
+    document.dayFour.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.dayFour.choice.length;i++) {
+      if (document.dayFour.choice[i].checked) {
+        sum = sum + parseInt(document.dayFour.choice[i].value);
+      }
+    }
+    document.dayFour.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.dayFour.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.dayFour.choice[i].value);
+      }
+    }
+    document.dayFour.totalBreakFour.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.dayFour.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.dayFour.choice[i].value);
+      }
+    }
+    document.dayFour.totalLunchFour.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.dayFour.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.dayFour.choice[i].value);
+      }
+    }
+    document.dayFour.totalDinnerFour.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Four.")
+    }
+  }
+
+function checkTotalfive() {
+    document.dayFive.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.dayFive.choice.length;i++) {
+      if (document.dayFive.choice[i].checked) {
+        sum = sum + parseInt(document.dayFive.choice[i].value);
+      }
+    }
+    document.dayFive.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.dayFive.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.dayFive.choice[i].value);
+      }
+    }
+    document.dayFive.totalBreakFive.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.dayFive.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.dayFive.choice[i].value);
+      }
+    }
+    document.dayFive.totalLunchFive.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.dayFive.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.dayFive.choice[i].value);
+      }
+    }
+    document.dayFive.totalDinnerFive.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Five.")
+    }
+  }
+
+function checkTotalsix() {
+    document.daySix.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.daySix.choice.length;i++) {
+      if (document.daySix.choice[i].checked) {
+        sum = sum + parseInt(document.daySix.choice[i].value);
+      }
+    }
+    document.daySix.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.daySix.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.daySix.choice[i].value);
+      }
+    }
+    document.daySix.totalBreakSix.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.daySix.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.daySix.choice[i].value);
+      }
+    }
+    document.daySix.totalLunchSix.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.daySix.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.daySix.choice[i].value);
+      }
+    }
+    document.daySix.totalDinnerSix.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Six.")
+    }
+  }
+
+function checkTotalseven() {
+    document.daySeven.total.value = '';
+    var sum = 0;
+    var sumBreak = 0;
+    var sumLunch = 0;
+    var sumDinner = 0;
+    for (i=0;i<document.daySeven.choice.length;i++) {
+      if (document.daySeven.choice[i].checked) {
+        sum = sum + parseInt(document.daySeven.choice[i].value);
+      }
+    }
+    document.daySeven.total.value = sum;
+
+    for (i=0;i<6;i++) {
+      if (document.daySeven.choice[i].checked) {
+        sumBreak = sumBreak + parseInt(document.daySeven.choice[i].value);
+      }
+    }
+    document.daySeven.totalBreakSeven.value = sumBreak;
+
+    for (i=6;i<12;i++) {
+      if (document.daySeven.choice[i].checked) {
+        sumLunch = sumLunch + parseInt(document.daySeven.choice[i].value);
+      }
+    }
+    document.daySeven.totalLunchSeven.value = sumLunch;
+
+    for (i=12;i<18;i++) {
+      if (document.daySeven.choice[i].checked) {
+        sumDinner = sumDinner + parseInt(document.daySeven.choice[i].value);
+      }
+    }
+    document.daySeven.totalDinnerSeven.value = sumDinner;
+
+    if (sum > localStorage.getItem("textvalue"))
+    {
+      alert("You have exceeded your recommended calorie intake. Please reselect your meals for Day Seven.")
+    }
+  }
+
+</SCRIPT>
+<style>
+
+</style>
+</head>
+<body class="bg">
+  <div class="topnav">
+    <a class="active" href="Revised_Project.html">Home</a>
+    <a href="Generator.html">Generator</a>
+    <a href="Information.html">Information</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+<h1 style="color: #17803c; text-align: center;">Food Plan Generator</h1>
+  <h2 style="color: #17803c; text-align: center;">How does the Food Plan Generator work?</h2>
+    <p style="text-align: center; margin-left: 15%; margin-right: 15%;";>Simple! All you have to do is take a brief survey for some important information about you, and the website does the rest! You don’t have to enter anything too personal. Just your gender, the age range you fall into, and how active you’d say you are. Using that information,
+    we’ll calculate a meal plan consisting of breakfast, lunch and dinner plans to last seven days. Each meal plan is carefully selected to include multiple food groups, and will have no more and no less than your precise calorie requirements. </p>
+<div align="center">
+  Your recommended calorie intake per day: <span id="calOut2"></span>
+  <br>
+  <br>
+
+<script>
+  document.getElementById("calOut2").innerHTML = localStorage.getItem("textvalue");
+</script>
+
+
+<table style="border: 1px solid black; background: #d1d1d1"><tr>
+
+<td style="border: 1px solid black">
+Day One:
+<br>
+Breakfast
+<form name="dayOne">
+<input type="checkbox" name="choice" value="175" onchange="checkTotalone()"/>Pancakes (Grain, 175)<br/>
+<input type="checkbox" name="choice" value="80" onchange="checkTotalone()"/>Toast (Grain, 80)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalone()"/>Butter (Fats, 100)<br/>
+<input type="checkbox" name="choice" value="200" onchange="checkTotalone()"/>Chocolate Chips (Fats, 200)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalone()"/>Milk (Dairy, 100)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotalone()"/>Banana (Fruit, 105)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakOne" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="200" onchange="checkTotalone()"/>Rice (Grain, 200)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalone()"/>Bread (Grain, 120)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalone()"/>Chopped Steak (Protein, 250)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalone()"/>Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="40" onchange="checkTotalone()"/>Peppers (Vegetable, 40)<br/>
+<input type="checkbox" name="choice" value="25" onchange="checkTotalone()"/>Broccoli (Vegetable, 25)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchOne" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalone()"/>Salmon (Proetin, 120)<br/>
+<input type="checkbox" name="choice" value="195" onchange="checkTotalone()"/>Ground Beef (Protein, 195)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalone()"/>Tomato (Fruit, 20)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalone()"/>Olive Oil (Oil, 120)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalone()"/>Green Beans (Vegetable, 20)<br/>
+<input type="checkbox" name="choice" value="35" onchange="checkTotalone()"/>Zucchini (Vegetable, 35)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerOne" value="0"/>
+<br>
+<br>
+Total For Day One: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+
+
+
+<td style="border: 1px solid black">
+Day Two:
+<br>
+Breakfast
+<form name="dayTwo">
+<input type="checkbox" name="choice" value="150" onchange="checkTotaltwo()"/>Milk (Dairy, 150)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotaltwo()"/>Cereal (Grain, 100)<br/>
+<input type="checkbox" name="choice" value="180" onchange="checkTotaltwo()"/>Bacon (Protein, 180)<br/>
+<input type="checkbox" name="choice" value="140" onchange="checkTotaltwo()"/>Eggs (Protein, 140)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotaltwo()"/>Apple (Fruit, 100)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotaltwo()"/>Banana (Fruit, 105)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakTwo" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="220" onchange="checkTotaltwo()"/>Pasta (Grain, 220)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotaltwo()"/>Meatballs (Protein, 100)<br/>
+<input type="checkbox" name="choice" value="180" onchange="checkTotaltwo()"/>Tomato Sauce (Fruit, 180)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotaltwo()"/>Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotaltwo()"/>Cheese (Dairy, 220)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotaltwo()"/>Spinach (Vegetable, 20)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchTwo" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="150" onchange="checkTotaltwo()"/>Potatoes (Vegetable, 150)<br/>
+<input type="checkbox" name="choice" value="125" onchange="checkTotaltwo()"/>Canola Oil (Oil, 125)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotaltwo()"/>Butter (Fat, 100)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotaltwo()"/>Turkey (Protein, 105)<br/>
+<input type="checkbox" name="choice" value="25" onchange="checkTotaltwo()"/>Broccoli (Vegetable, 25)<br/>
+<input type="checkbox" name="choice" value="15" onchange="checkTotaltwo()"/>Asparagus (Vegetable, 15)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerTwo" value="0"/>
+<br>
+<br>
+Total For Day Two: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+
+<td style="border: 1px solid black">
+Day Three:
+<br>
+Breakfast
+<form name="dayThree">
+<input type="checkbox" name="choice" value="150" onchange="checkTotalthree()"/>Oatmeal (Grain, 150)<br/>
+<input type="checkbox" name="choice" value="85" onchange="checkTotalthree()"/>Blueberries (Fruit, 85)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotalthree()"/>Almonds (Nuts, 105)<br/>
+<input type="checkbox" name="choice" value="260" onchange="checkTotalthree()"/>Bagel (Grain, 260)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalthree()"/>Cream Cheese (Dairy, 100)<br/>
+<input type="checkbox" name="choice" value="70" onchange="checkTotalthree()"/>Smoked Salmon(Protein, 70)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakThree" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="150" onchange="checkTotalthree()"/>Mixed Greens (Vegetables, 150)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalthree()"/>Sliced Grilled Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="130" onchange="checkTotalthree()"/>Bread Roll (Grain, 130)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalthree()"/>Ham (Protein, 220)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalthree()"/>Cheese (Dairy, 220)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotalthree()"/>Sliced Peaches (Fruit, 105)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchThree" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalthree()"/>Green Beans (Vegetable, 20)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalthree()"/>Carrots (Vegetable, 20)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalthree()"/>Steak (Protein, 250)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalthree()"/>Olive Oil (Oil, 120)<br/>
+<input type="checkbox" name="choice" value="170" onchange="checkTotalthree()"/>Lobster (Protein, 170)<br/>
+<input type="checkbox" name="choice" value="200" onchange="checkTotalthree()"/>Rice (Grain, 200)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerThree" value="0"/>
+<br>
+<br>
+Total For Day Three: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+
+<td style="border: 1px solid black">
+Day Four:
+<br>
+Breakfast
+<form name="dayFour">
+<input type="checkbox" name="choice" value="100" onchange="checkTotalfour()"/>Grits (Grain, 100)<br/>
+<input type="checkbox" name="choice" value="140" onchange="checkTotalfour()"/>Eggs (Protein, 140)<br/>
+<input type="checkbox" name="choice" value="40" onchange="checkTotalfour()"/>Peppers (Vegetable, 40)<br/>
+<input type="checkbox" name="choice" value="60" onchange="checkTotalfour()"/>Onions (Vegetable, 60)<br/>
+<input type="checkbox" name="choice" value="180" onchange="checkTotalfour()"/>Bacon (Protein, 180)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalfour()"/>Sausage (Protein, 250)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakFour" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalfour()"/>Elbow Pasta (Grain, 220)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalfour()"/>Cheese (Dairy, 220)<br/>
+<input type="checkbox" name="choice" value="150" onchange="checkTotalfour()"/>Milk (Dairy, 150)<br/>
+<input type="checkbox" name="choice" value="95" onchange="checkTotalfour()"/>Tortilla (Grain, 95)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalfour()"/>Shrimp (Protein, 100)<br/>
+<input type="checkbox" name="choice" value="195" onchange="checkTotalfour()"/>Ground Beef (Protein, 195)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchFour" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalfour()"/>Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="110" onchange="checkTotalfour()"/>Sweet Potatoes (Vegetable, 110)<br/>
+<input type="checkbox" name="choice" value="110" onchange="checkTotalfour()"/>Tilapia (Protein, 110)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalfour()"/>Butter (Oil, 100)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalfour()"/>Carrots (Vegetable, 20)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalfour()"/>Biscuits (Grain, 100)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerFour" value="0"/>
+<br>
+<br>
+Total For Day Four: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+
+<td style="border: 1px solid black">
+Day Five:
+<br>
+Breakfast
+<form name="dayFive">
+<input type="checkbox" name="choice" value="180" onchange="checkTotalfive()"/>Waffles (Grain, 180)<br/>
+<input type="checkbox" name="choice" value="140" onchange="checkTotalfive()"/>Omelette (Protein, 140)<br/>
+<input type="checkbox" name="choice" value="180" onchange="checkTotalfive()"/>Bacon (Protein, 180)<br/>
+<input type="checkbox" name="choice" value="35" onchange="checkTotalfive()"/>Syrup (Sweets, 35)<br/>
+<input type="checkbox" name="choice" value="80" onchange="checkTotalfive()"/>Toast (Grain, 80)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotalfive()"/>Banana (Fruit, 105)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakFive" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="200" onchange="checkTotalfive()"/>Rice (Grain, 200)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalfive()"/>Salmon (Protein, 120)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalfive()"/>Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="85" onchange="checkTotalfive()"/>Pineapples (Fruit, 85)<br/>
+<input type="checkbox" name="choice" value="135" onchange="checkTotalfive()"/>Mangoes (Fruit, 135)<br/>
+<input type="checkbox" name="choice" value="180" onchange="checkTotalfive()"/>Edamame (Protein, 180)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchFive" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="130" onchange="checkTotalfive()"/>Ribs (Protein, 130)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalfive()"/>French Fries (Vegetable, 120)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalfive()"/>Steak (Protein, 250)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalfive()"/>Olive Oil (Oil, 120)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalfive()"/>Ice Cream (Sweets,100)<br/>
+<input type="checkbox" name="choice" value="150" onchange="checkTotalfive()"/>Tiramisu (Sweets, 150)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerFive" value="0"/>
+<br>
+<br>
+Total for Day Five: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+<td style="border: 1px solid black">
+Day Six:
+<br>
+Breakfast
+<form name="daySix">
+<input type="checkbox" name="choice" value="160" onchange="checkTotalsix()"/>Boiled Eggs (Protein, 160)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalsix()"/>Cereal (Grain, 100)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalsix()"/>Yogurt (Dairy, 100)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalsix()"/>Strawberries (Fruit, 20)<br/>
+<input type="checkbox" name="choice" value="85" onchange="checkTotalsix()"/>Blueberries (Fruit, 85)<br/>
+<input type="checkbox" name="choice" value="105" onchange="checkTotalsix()"/>Banana (Fruit, 105)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakSix" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalsix()"/>Curly Fries (Vegetable, 240)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalsix()"/>Chicken (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="40" onchange="checkTotalsix()"/>Mushrooms (Vegetable, 40)<br/>
+<input type="checkbox" name="choice" value="75" onchange="checkTotalsix()"/>Corn (Vegetable, 75)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalsix()"/>Pasta (Grain, 220)<br/>
+<input type="checkbox" name="choice" value="120" onchange="checkTotalsix()"/>Bread (Grain, 120)<br/>
+<br>
+Total: <input type="text" size="2" name="totalLunchSix" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalsix()"/>Chicken Wings (Protein, 220)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalsix()"/>Sausage (Protein, 250)<br/>
+<input type="checkbox" name="choice" value="150" onchange="checkTotalsix()"/>Potatoes (Vegetables, 150)<br/>
+<input type="checkbox" name="choice" value="5" onchange="checkTotalsix()"/>Celery (Vegetables, 5)<br/>
+<input type="checkbox" name="choice" value="40" onchange="checkTotalsix()"/>Peppers (Vegetables, 40)<br/>
+<input type="checkbox" name="choice" value="250" onchange="checkTotalsix()"/>Cake (Sweets, 250)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerSix" value="0"/>
+<br>
+<br>
+Total For Day Six: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+<td style="border: 1px solid black">
+Day Seven:
+<br>
+Breakfast
+<form name="daySeven">
+<input type="checkbox" name="choice" value="140" onchange="checkTotalseven()"/>Scrambled Eggs (Protein, 140)<br/>
+<input type="checkbox" name="choice" value="220" onchange="checkTotalseven()"/>Cheese (Dairy, 220)<br/>
+<input type="checkbox" name="choice" value="80" onchange="checkTotalseven()"/>Toast (Grain, 80)<br/>
+<input type="checkbox" name="choice" value="100" onchange="checkTotalseven()"/>Butter (Oil, 100)<br/>
+<input type="checkbox" name="choice" value="50" onchange="checkTotalseven()"/>Jelly (Fruit, 50)<br/>
+<input type="checkbox" name="choice" value="190" onchange="checkTotalseven()"/>Peanut Butter (Proteins, 190)<br/>
+<br>
+Total: <input type="text" size="2" name="totalBreakSeven" value="0"/>
+<br>
+<br>
+Lunch
+<br>
+<input type="checkbox" name="choice" value="150" onchange="checkTotalseven()"/>Mixed Greens (Vegetables, 150)<br/>
+<input type="checkbox" name="choice" value="75" onchange="checkTotalseven()"/>Dressing (None, 75)<br/>
+<input type="checkbox" name="choice" value="240" onchange="checkTotalseven()"/>Tofu (Protein, 240)<br/>
+<input type="checkbox" name="choice" value="175" onchange="checkTotalseven()"/>Pork (Protein, 175)<br/>
+<input type="checkbox" name="choice" value="95" onchange="checkTotalseven()"/>Tortilla (Grain, 95)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalseven()"/>Tomatoes (Fruit, 20)<br/>
+<br>
+
+Total: <input type="text" size="2" name="totalLunchSeven" value="0"/>
+<br>
+<br>
+Dinner
+<br>
+<input type="checkbox" name="choice" value="160" onchange="checkTotalseven()"/>Crab (Protein, 160)<br/>
+<input type="checkbox" name="choice" value="75" onchange="checkTotalseven()"/>Melted Butter (Oil, 75)<br/>
+<input type="checkbox" name="choice" value="200" onchange="checkTotalseven()"/>Rice (Grain, 200)<br/>
+<input type="checkbox" name="choice" value="25" onchange="checkTotalseven()"/>Broccoli (Vegetables, 25)<br/>
+<input type="checkbox" name="choice" value="20" onchange="checkTotalseven()"/>Spinach (Vegetables, 20)<br/>
+<input type="checkbox" name="choice" value="170" onchange="checkTotalseven()"/>Lobster (Proteins, 170)<br/>
+<br>
+Total: <input type="text" size="2" name="totalDinnerSeven" value="0"/>
+<br>
+<br>
+Total For Day Seven: <input type="text" size="2" name="total" value="0"/>
+</td>
+</form>
+
+
+</tr>
+</table>
+
+</body>
+</html>
